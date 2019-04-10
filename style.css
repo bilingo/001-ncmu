@@ -73,7 +73,13 @@ img {
 
 /* BASE */
 
+html {
+	min-width: 480px;
+	height: 100%;
+	}
+
 body {
+    height: 100%;
 	color: #000;
 	font-size: 16px;
 	line-height: 32px;
@@ -86,6 +92,15 @@ body {
 	width: 1170px;
 	margin: 0 auto;
 	text-align: left;
+	}
+
+.wrap_h {
+	min-height: 100%;
+	position: relative;
+	}
+
+.wrap_in {
+	padding: 0 0 240px 0;
 	}
 
 input, textarea {
@@ -528,17 +543,19 @@ small {
 	height: 11px;
 	margin: 0 5px 0 0;
 	background: url('images/del.png') no-repeat;
+	background-size: 11px auto;
 	vertical-align: -2px;
 	cursor: pointer;
 	}
 
 .form_file_del:hover{
-	background: url('images/del.png') no-repeat 0px -11px;
+	background-position: 0px -11px;
 	}
 
 .form_file_ok{
 	padding: 0 19px 0 0;
 	background: url('images/ok.png') no-repeat right 9px;
+	background-size: 10px 8px;
 	}
 
 
@@ -597,6 +614,7 @@ header {
 	float: right;
 	padding: 0 0 0 35px;
 	background: url('images/top_lk.png') no-repeat 0px center;
+	background-size: 25px 25px;
 	line-height: 64px;
 	}
 
@@ -621,6 +639,7 @@ header {
 	width: 38px;
 	height: 38px;
 	background: url('images/search.png') no-repeat center center;
+	background-size: 19px 19px;
 	border-radius: 50%;
 	position: absolute;
 	top: 2px;
@@ -634,11 +653,16 @@ header {
 	}
 
 .search{
-	display: none;
-	width: 650px;
+	width: 0px;
 	position: absolute;
 	top: 0px;
 	right: 0px;
+	overflow: hidden;
+	transition: all 0.4s 0.02s ease;
+	}
+
+.search.open{
+	width: 650px;
 	}
 
 .search_inp input {
@@ -664,6 +688,7 @@ header {
 	width: 38px;
 	height: 38px;
 	background: url('images/search.png') no-repeat center center;
+	background-size: 19px 19px;
 	border: 0;
 	border-radius: 50%;
 	transition: all 0.3s 0.02s ease;
@@ -678,9 +703,9 @@ header {
 .show_nav{
 	float: right;
 	display: none;
-	width: 40px;
+	width: 49px;
 	height: 37px;
-	margin: 12px 10px 0 0;
+	margin: 12px 21px 0 0;
 	position: relative;
 	cursor: pointer;
 	}
@@ -691,7 +716,6 @@ header {
 	width: 100%;
 	height: 5px;
 	background: #fff;
-	border-radius: 2px;
 	position: absolute;
 	left: 0px;
 	transition: all 0.3s 0.02s ease;
@@ -798,6 +822,7 @@ header {
 	width: 8px;
 	height: 7px;
 	background: url('images/sub_nav.png') no-repeat 0px bottom;
+	background-size: 8px auto;
 	position: absolute;
 	top: 50%;
 	right: -16px;
@@ -806,6 +831,7 @@ header {
 
 .home .nav_top_bg:hover .nav_top > ul > li.sub_nav > a:before {
 	background: url('images/sub_nav.png') no-repeat 0px -7px;
+	background-size: 8px auto;
 	}
 
 .nav_top > ul > li.sub_nav:hover > a:before {
@@ -896,7 +922,8 @@ header {
 .home_min{
 	max-width: 790px;
 	padding: 145px 0 54px 195px;
-	background: url('images/home_min.png') no-repeat 195px 51px;
+	background: url('images/gerb.png') no-repeat 195px 51px;
+	background-size: 70px 76px;
 	color: #fff;
 	font-size: 24px;
 	line-height: 30px;
@@ -1051,6 +1078,7 @@ header {
 	width: 14px;
 	height: 30px;
 	background: url('images/plan_d.png') no-repeat;
+	background-size: 14px 30px;
 	position: absolute;
 	top: 0px;
 	right: -14px;
@@ -1077,6 +1105,7 @@ header {
 	padding: 216px 35px 0 35px;
 	margin: 0 22px 0 0;
 	border: 2px solid #f0f0f0;
+	background-size: 131px 131px !important;
 	color: #0055cc;
 	font-size: 24px;
 	line-height: 29px;
@@ -1086,16 +1115,16 @@ header {
 	}
 
 .tipe1 {
-	background: url('images/tipe1.png') no-repeat center 54px;
+	background: #fafafa url('images/tipe1.png') no-repeat center 54px;
 	}
 
 .tipe2 {
-	background: url('images/tipe2.png') no-repeat center 54px;
+	background: #fafafa url('images/tipe2.png') no-repeat center 54px;
 	}
 
 .tipe3 {
 	margin: 0;
-	background: url('images/tipe3.png') no-repeat center 54px;
+	background: #fafafa url('images/tipe3.png') no-repeat center 54px;
 	}
 
 .tipe:hover {
@@ -1171,6 +1200,14 @@ header {
 	padding: 0 0 0 29px;
 	}
 
+.docs_sort_km {
+	width: 300px;
+	}
+
+.docs_sort_year {
+	width: 120px;
+	}
+
 
 .doc_list {
 	padding: 0 0 11px 0;
@@ -1244,6 +1281,7 @@ header {
 .p_nav .p_nav_prev{
 	margin: 0 80px 0 0;
 	background: #fff url('images/prev.png') no-repeat center center;
+	background-size: 9px 16px;
 	border: 1px solid #e6e6e6;
 	text-indent: -9999px;
 	}
@@ -1251,6 +1289,7 @@ header {
 .p_nav .p_nav_next{
 	margin: 0 0 0 80px;
 	background: #fff url('images/next.png') no-repeat center center;
+	background-size: 9px 16px;
 	border: 1px solid #e6e6e6;
 	text-indent: -9999px;
 	}
@@ -1272,7 +1311,8 @@ header {
 	border: 0;
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	z-index: 100;
+	transform: translateY(-100%);
 	transition: all 0.3s 0.02s ease;
 	opacity: 0.3;
 	overflow: hidden;
@@ -1351,7 +1391,10 @@ header {
 /* FOOTER */
 
 footer {
+    height: 170px;
+    margin: -240px 0 0 0;
 	padding: 35px 0;
+	position: relative;
 	background: #e2e2e2;
 	}
 
@@ -1402,9 +1445,9 @@ footer {
 .show_bot_nav{
 	float: right;
 	display: none;
-	width: 40px;
+	width: 49px;
 	height: 37px;
-	margin: 12px 10px 0 0;
+	margin: 20px 15px 0 0;
 	position: relative;
 	cursor: pointer;
 	}

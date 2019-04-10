@@ -17,13 +17,13 @@
 
 
 	jQuery('.show_search').click(function() {
-		jQuery('.search').fadeIn(100);
+		jQuery('.search').addClass('open');
 		return false;
 	});
 	jQuery(document).click( function(event){
 		if( jQuery(event.target).closest(".top_search").length ) 
 		return;
-		jQuery(".search").fadeOut(100);
+		jQuery(".search").removeClass('open');
 		event.stopPropagation();
 	});
 

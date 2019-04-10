@@ -22,6 +22,7 @@
 }
 .jq-checkbox.checked {
 	background: #1d36b4 url('../images/cb.png') no-repeat center center;
+	background-size: 12px 9px;
 }
 .jq-radio {
 	border-radius: 50%;
@@ -69,6 +70,7 @@
 	width: 22px;
 	height: 20px;
 	background: url('../images/file.png') no-repeat;
+	background-size: 22px 20px;
 	position: absolute;
 	top: 13px;
 	left: 13px;
@@ -182,7 +184,7 @@
 }
 .jq-selectbox {
 	width: 100%;
-	min-width: 140px;
+	min-width: 120px;
 	vertical-align: middle;
 	cursor: pointer;
 }
@@ -225,12 +227,13 @@
 }
 .jq-selectbox__trigger-arrow {
 	width: 13px;
-	height: 9px;
-	background: url('../images/sel.png') no-repeat;
+	height: 13px;
+	background: url('../images/sel.svg') no-repeat;
+	background-size: 13px 13px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%) rotate(90deg);
 }
 .jq-selectbox:hover .jq-selectbox__trigger-arrow {
 	border-top-color: #000;
