@@ -175,14 +175,6 @@ header {
 	}
 
 
-.home_min{
-	padding: 100px 10px 20px 10px;
-	background-position: 10px 20px;
-	font-size: 18px;
-	line-height: 22px;
-	}
-
-
 .home_title{
 	padding: 0 20px 20px 65px;
 	font-size: 16px;
@@ -205,6 +197,10 @@ header {
 	background: none;
 	font-size: 16px;
 	line-height: 24px;
+	}
+
+.home_min_i{
+	font-size: 14px;
 	}
 
 
@@ -239,6 +235,73 @@ header {
 .home_tab {
 	padding: 35px 15px;
 	}
+
+
+
+.home_table tbody {
+	display: block;
+	}
+
+.home_table tr {
+	display: block;
+	padding: 17px 10px;
+    border-bottom: 1px solid #d9d9d9;
+	}
+
+.home_table tr.mob_tr_top {
+	border-bottom: 3px solid #1d36b4
+	}
+
+.home_table tr:before, .home_table tr:after {content: " ";display: table;}
+.home_table tr:after {clear: both;}
+.home_table tr {*zoom: 1;}
+
+.home_table tr th {
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	}
+
+.home_table tr td {
+	display: block;
+	width: 100%;
+    border: 0;
+	padding: 0;
+	}
+
+.home_table .mob_hide {
+	display: none;
+	}
+
+.home_table tr .mob_th_a {
+	padding: 0 0 5px 0;
+	}
+
+.home_table tr .mob_th_a::after {
+    content: attr(data-th) "";
+    display: block;
+	padding: 15px 0 0 0;
+	color: #919191;
+	font-size: 14px;
+	line-height: 18px;
+	font-style: italic;
+	}
+
+.home_table tr .mob_th_b {
+	float: left;
+	width: auto;
+	padding: 0 27px 0 0;
+	}
+
+.home_table tr .mob_th_b::before {
+    content: attr(data-th) "";
+    display: block;
+	padding: 0 0 5px 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	}
+
 
 
 #content {
@@ -289,7 +352,6 @@ header {
 
 
 footer {
-	height: auto;
 	min-height: 73px;
     margin: -133px 0 0 0;
 	}
