@@ -130,38 +130,40 @@
 				<br />
 				<h2>H2 — ссылки и кнопки</h2>
 				<p><a class="btn" href="#">Принять участие в конкурсе</a></p>
+				<p><a class="btn btn_sm" href="#">Принять участие в конкурсе</a></p>
+				<p><a class="btn btn_sm btn_file" href="#">Принять участие в конкурсе</a></p>
 				<p><a class="btn2" href="#">Назад</a></p>
 				<p><a href="#">Ссылка</a></p>
 				<br />
 				<h2>H2 — таблицы</h2>
 				<div class="table_container">
-				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+				<table class="table_no_rb" border="0" width="100%" cellspacing="0" cellpadding="0">
 					<tr>
-						<td width="90%" class="tab_no_rb">Математика</td>
+						<td width="90%">Математика</td>
 						<td>1050</td>
 					</tr>
 					<tr>
-						<td width="90%" class="tab_no_rb">Физика</td>
+						<td width="90%">Физика</td>
 						<td>2000</td>
 					</tr>
 					<tr>
-						<td width="90%" class="tab_no_rb">Химия</td>
+						<td width="90%">Химия</td>
 						<td>2540</td>
 					</tr>
 					<tr>
-						<td width="90%" class="tab_no_rb">История</td>
+						<td width="90%">История</td>
 						<td>1020</td>
 					</tr>
 					<tr>
-						<td width="90%" class="tab_no_rb">Философия</td>
+						<td width="90%">Философия</td>
 						<td>7850</td>
 					</tr>
 					<tr>
-						<td width="90%" class="tab_no_rb">Геология</td>
+						<td width="90%">Геология</td>
 						<td>300</td>
 					</tr>
 					<tr>
-						<td width="90%" class="tab_no_rb">Маркетинг</td>
+						<td width="90%">Маркетинг</td>
 						<td>7950</td>
 					</tr>
 				</table>
@@ -218,15 +220,14 @@
 				</table>
 				</div>
 				<h2>H2 — Формы</h2>
-				<form>
+				<form class="validate">
 					<div class="form_line">
 						<label class="lab">Имя <span class="req">*</span></label>
-						<input class="inp" type="text" value="" />
+						<input class="inp required" type="text" value="" name="name"/>
 					</div>
-					<div class="form_line error">
+					<div class="form_line">
 						<label class="lab">Телефон</label>
-						<input class="inp err" type="tel" value="" />
-						<div class="inp_info">Не верный формат даных</div>
+						<input class="inp required" type="tel" value="" name="tel"/>
 					</div>
 					<div class="form_line">
 						<label class="lab">Страна</label>
@@ -332,6 +333,9 @@
 
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="js/slick.css" />
+
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/messages_ru.min.js"></script>
 
 	<script type="text/javascript" src="js/custom.js"></script>
 

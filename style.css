@@ -221,7 +221,7 @@ h6, .h6{
 	background: #dbf8f8;
 	}
 
-.tab_no_rb{
+.tab_no_rb, .table_no_rb tr th, .table_no_rb tr td {
 	border-right: 0 !important;
 	}
 
@@ -417,6 +417,13 @@ small {
 	line-height: 14px;
 	}
 
+label.error {
+	padding: 5px 0 0 0;
+	color: #ec0032;
+	font-size: 12px;
+	line-height: 14px;
+	}
+
 .error, .error .lab {
 	color: #ec0032;
 	}
@@ -456,7 +463,7 @@ small {
 	border: 1px solid #000;
 	}
 
-.error .inp, .error .ta {
+.error .inp, .error .ta, input.error, textarea.error {
 	border: 1px solid #ec0032;
 	}
 
@@ -491,6 +498,30 @@ small {
 	color: #fff;
 	text-decoration: none;
 	}
+
+.btn_sm {
+	min-height: 45px;
+	padding: 10px 15px;
+	font-weight: 400;
+	text-transform: none;
+	}
+
+.btn_file {
+	padding: 10px 10px 10px 47px;
+	position: relative;
+	}
+
+.btn_file:before {
+    content: " ";
+    display: block;
+    width: 22px;
+    height: 20px;
+    background: url(images/file.png) no-repeat;
+    background-size: 22px 20px;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
 
 .btn2 {
 	display: inline-block;

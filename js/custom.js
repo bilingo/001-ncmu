@@ -45,6 +45,10 @@
 
 
 
+	jQuery(".validate").validate();
+
+
+
 	jQuery('.slider').slick({
 		dots: true,
 		arrows: true,
