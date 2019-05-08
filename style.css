@@ -407,6 +407,13 @@ small {
 	line-height: 20px;
 	}
 
+.lab3{
+	display: block;
+	padding: 0 0 5px 0;
+	color: #000000;
+	line-height: 20px;
+	}
+
 .req {
 	color: #ec0032;
 	}
@@ -659,6 +666,97 @@ header {
 	text-decoration: none;
 	}
 
+.top_user{
+	float: right;
+	padding: 0 0 0 35px;
+	position: relative;
+	background: url('images/top_lk.png') no-repeat 0px center;
+	background-size: 25px 25px;
+	line-height: 64px;
+	}
+
+.top_user > a{
+	color: #fff;
+	text-decoration: underline;
+	}
+
+.top_user > a:hover{
+	color: #fff;
+	text-decoration: none;
+	}
+
+.top_user ul{
+	display: none;
+	width: 158px;
+	padding: 0 21px;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0px 0px 18px rgba(2, 17, 24, 0.2);
+	position: absolute;
+	top: 55px;
+	left: -164px;
+	z-index: 200;
+	line-height: 20px;
+	}
+
+.top_user ul:before {
+	content: " ";
+	display: block;
+	width: 13px;
+	height: 8px;
+	background: url('images/top_user_ul.png') no-repeat;
+	background-size: 13px 8px;
+	position: absolute;
+	top: -8px;
+	right: 17px;
+	}
+
+.top_user ul li{
+	display: block;
+	padding: 3px 0;
+	border-bottom: 1px solid #dadada;
+	}
+
+.top_user ul li:last-child{
+	border: 0;
+	}
+
+.top_user ul li a{
+	display: block;
+	padding: 7px 0;
+	position: relative;
+	color: #0f295f;
+	}
+
+.top_user ul li a:hover{
+	color: #0f295f;
+	text-decoration: none;
+	}
+
+.top_user ul li a:before {
+	content: " ";
+	display: none;
+	width: 3px;
+	height: 100%;
+	background: #50b2dd;
+	position: absolute;
+	top: 0px;
+	left: -15px;
+	transition: all 0.3s 0.02s ease;
+	}
+
+.top_user ul li a:hover:before, .top_user ul li.active a:before {
+	display: block;
+	}
+
+.top_user ul li.active a {
+	font-weight: bold;
+	}
+
+.top_user_out a{
+	background: url('images/top_user_out.png') no-repeat right center;
+	}
+
 .top_search{
 	float: right;
 	margin: 12px 14px 0 0;
@@ -898,6 +996,26 @@ header {
 
 .nav_top_sub ul li a:hover {
 	text-decoration: underline;
+	}
+
+.nav_top_sub ul li.active a {
+	color: #a9a9a9;
+	}
+
+.top_user_out2 a {
+	position: relative;
+	}
+
+.top_user_out2 a:before {
+	content: " ";
+	display: block;
+	width: 15px;
+	height: 12px;
+	background: url('images/top_user_out2.png') no-repeat;
+	background-size: 15px 12px;
+	position: absolute;
+	top: 6px;
+	left: -25px;
 	}
 
 /* END HEADER */
@@ -1236,7 +1354,7 @@ header {
 	}
 
 .docs_sort_year {
-	width: 120px;
+	min-width: 120px;
 	}
 
 
@@ -1414,6 +1532,173 @@ header {
 	background: #1d36b4;
 	color: #fff;
 	font-weight: bold;
+	}
+
+
+.login_form {
+	width: 420px;
+	margin: 0 auto;
+	}
+
+.login_form h1 {
+	margin: 0 0 47px 0;
+	text-transform: uppercase;
+	text-align: center;
+	}
+
+.login_form_line {
+	padding: 0 0 26px 0;
+	}
+
+.login_form_cb {
+	margin: -7px 0 0 0;
+	padding: 0 0 38px 0;
+	line-height: 22px;
+	}
+
+.login_form_sub .btn {
+	width: 100%;
+	text-transform: uppercase;
+	}
+
+.login_form_zp{
+	padding: 11px 0 0 0;
+	text-align: center;
+	}
+
+.login_form_reg{
+	padding: 44px 0 0 0;
+	line-height: 24px;
+	text-align: center;
+	}
+
+
+.reg_form {
+	width: 674px;
+	margin: 0 auto;
+	position: relative;
+	}
+
+.reg_form:before {
+	content: " ";
+	display: block;
+	width: 239px;
+	height: 5px;
+	background: #1d36b4;
+	position: absolute;
+	top: 15px;
+	left: -246px;
+	}
+
+.reg_form_bl{
+	padding: 25px 29px 3px 29px;
+	}
+
+.reg_form_bl_bg{
+	background: #fafafa;
+	}
+
+.reg_form_bl_t{
+	padding: 0 0 18px 0;
+	line-height: 24px;
+	}
+
+.reg_form h1 {
+	margin: 0 0 6px 0;
+	padding: 0 29px;
+	text-transform: uppercase;
+	}
+
+.reg_form h2 {
+	margin: 0 0 19px 0;
+	}
+
+.reg_form_line {
+	padding: 0 0 26px 0;
+	}
+
+.upload{
+	height: 22px;
+    padding: 20px;
+    border: 1px dashed #b2b2b2;
+	overflow: hidden;
+	position: relative;
+	line-height: 22px;
+    text-align: center;
+	}
+
+.upload a{
+    color:#7f7f7f;
+	}
+
+.upload a:hover{
+    color:#29bfbd;
+	text-decoration: none;
+	}
+
+.upload input{
+    display:none;
+	}
+
+.fu_file{
+	width: 90%;
+	height: 22px;
+    padding: 20px 5%;
+	background: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	}
+
+.progress {
+	width: 0px;
+    height: 62px;
+    overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    background: #eefafa;
+	}
+
+.fu_file.error .progress {
+    background: #ffe5e5;
+	}
+
+.fu_file p{
+	position: relative;
+	margin: 0;
+	color: #29bfbd;
+	}
+
+.fu_file.error p {
+	color: #ec0032;
+	}
+
+.fu_file span{
+    width: 11px;
+    height: 11px;
+    background: url('images/fu_file.png') no-repeat;
+    background-size: 11px 22px;
+    background-position: 0 -11px;
+    position: absolute;
+    top: 25px;
+    right: 17px;
+    cursor:pointer;
+	}
+
+.fu_file.working span{
+    background-position: 0 0px;
+	}
+
+.reg_form_sogl{
+	float: left;
+	padding: 8px 0 0 0;
+	font-size: 12px;
+	line-height: 18px;
+	}
+
+.reg_form_sub{
+	float: right;
 	}
 
 /* END POSTS */

@@ -39,7 +39,7 @@
 
 
 
-	jQuery('input, select').styler({
+	jQuery('input.file, input[type="checkbox"], input[type="radio"], select').styler({
 		filePlaceholder: 'Прикрепить файл',
 	});
 
@@ -58,6 +58,53 @@
 		slidesToShow: 1,
 		slidesToScroll: 1,
 	});
+
+
+
+	jQuery('.top_user').hover(
+	function() {
+		jQuery(this).find('ul').fadeIn(100);
+	},
+	function() {
+		jQuery(this).find('ul').fadeOut(100);
+	});
+
+
+
+    jQuery('.upload a').click(function(){
+        jQuery(this).parent().find('input').click();
+    });
+
+    jQuery('.upload').fileupload({
+        dropZone: jQuery(this),
+        add: function (e, data) {
+            var tpl = jQuery('<div class="fu_file working"><div class="progress"></div><p></p><span></span></div>');
+            var th = jQuery(this);
+            tpl.find('p').text(data.files[0].name);
+            data.context = tpl.appendTo(th);
+            tpl.find('span').click(function(){
+                if(tpl.hasClass('working')){
+                    jqXHR.abort();
+                }
+                tpl.fadeOut(function(){
+                    tpl.remove();
+                });
+            });
+            var jqXHR = data.submit();
+        },
+        progress: function(e, data){
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            if(progress == 100){
+                data.context.removeClass('working');
+            }
+            jQuery(this).find('.progress').css(
+                'width', progress + '%'
+            );
+        },
+        fail:function(e, data){
+            data.context.addClass('error');
+        }
+    });
 
 
 

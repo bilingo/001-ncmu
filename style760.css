@@ -104,6 +104,12 @@
 	}
 
 
+.reg_form:before {
+	width: 34px;
+	left: -31px;
+	}
+
+
 
 footer {
     min-height: 266px;

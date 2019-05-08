@@ -60,6 +60,10 @@ header {
 	display: none;
 	}
 
+.top_user{
+	display: none;
+	}
+
 .top_search{
 	display: none;
 	}
@@ -350,6 +354,39 @@ header {
 	padding: 10px 0 0 0;
 	}
 
+
+.login_form {
+	width: 450px;
+	}
+
+.login_form h1 {
+	margin: 0 0 30px 0;
+	}
+
+.login_form_cb {
+	padding: 0 0 30px 0;
+	}
+
+.login_form_reg{
+	padding: 34px 0 0 0;
+	}
+
+
+.reg_form {
+	width: 450px;
+	}
+
+.reg_form:before {
+	display: none;
+	}
+
+.reg_form_bl{
+	padding: 20px 10px 3px 10px;
+	}
+
+.reg_form h1 {
+	padding: 0 10px;
+	}
 
 footer {
 	min-height: 73px;
